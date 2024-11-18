@@ -1,0 +1,117 @@
+
+/* External CSS - styles.css */
+html {
+    scroll-behavior: smooth;
+}
+
+.hero {
+    position: relative;
+    height: 100vh;
+    background: url('https://www.firstinspires.org/sites/default/files/image_gallery/20220423_BM_0293.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.btn-custom {
+    background-color: #ff5722;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn-custom:hover {
+    background-color: #e64a19;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: #195ccf;
+    font-size: 1.1rem;
+}
+
+header a {
+    color: white !important;
+    text-decoration: none;
+    margin-right: 15px;
+    transition: color 0.3s;
+}
+
+header a:hover {
+    color: #ffccbc !important;
+}
+
+.robot {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    width: 50px;
+    height: 50px;
+    background-color: #FF5722;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+}
+
+/* Dark Mode styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.dark-mode .hero {
+    background: url('/assets/hero.jpeg') no-repeat center center/cover;
+    background-blend-mode: darken;
+    color: #ffffff;
+}
+
+.dark-mode .btn-custom {
+    background-color: #e64a19;
+}
+
+.dark-mode header {
+    background: #333;
+}
+
+.dark-mode header a {
+    color: #ffffff !important;
+}
+
+.dark-mode .card {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+.dark-mode footer {
+    background-color: #1e1e1e;
+}
